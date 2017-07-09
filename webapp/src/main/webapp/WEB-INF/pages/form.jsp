@@ -62,7 +62,8 @@
                                     <form:input path="foreground"       required="required"
                                                 id="foreground-input"   type="text"
                                                 aria-describedby="foreground-sample-invalid  help-block-colors"
-                                                class="form-control form-color-input"/>
+                                                list="awesomplete_colorsList"
+                                                class="awesomplete form-control form-color-input"/>
                                 </div>
                                 <div id="foreground-sample" class="col-lg-2 ${foregroundSampleClass}" style="${foregroundSampleStyle}">
                                     <span id="foreground-sample-invalid" style="${foregroundInvalidStyle}" class="invalid-color"><fmt:message key="form.invalidColor"/></span>
@@ -92,13 +93,25 @@
                                     <form:input path="background"       required="required"
                                                 id="background-input"   type="text"
                                                 aria-describedby="background-sample-invalid  help-block-colors"
-                                                class="form-control form-color-input"/>
+                                                list="awesomplete_colorsList"
+                                                class="awesomplete form-control form-color-input"/>
                                     <span id="help-block-colors" class="help-block"><fmt:message key="form.help"/></span>
                                 </div>
                                 <div id="background-sample" class="col-lg-2 ${backgroundSampleClass}" style="${backgroundSampleStyle}">
                                     <span id="background-sample-invalid" style="${backgroundInvalidStyle}" class="invalid-color"><fmt:message key="form.invalidColor"/></span>
                                 </div>
                             </div>
+                            <datalist id="awesomplete_colorsList">
+                                <option>Green</option>
+                                <option>Yellow</option>
+                                <option>yellow green</option>
+                                <option>Gray</option>
+                                <option>Light Gray</option>
+                                <option>light slate gray</option>
+                                <option>Grey</option>
+                                <option>Light Grey</option>
+                                <option>light slate grey</option>
+                            </datalist>
 
                             <%-- Ratio --%>
                             <c:set var="ratioOnError">
